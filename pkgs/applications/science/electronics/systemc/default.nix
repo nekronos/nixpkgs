@@ -14,13 +14,10 @@ stdenv.mkDerivation rec {
   enableParallelBuilding = true;
   nativeBuildInputs = [ autoreconfHook ];
 
-  configureFlags = [ "--with-unix-layout" ];
-
   meta = with lib; {
     description = "The language for System-level design, modeling and verification";
     homepage    = "https://systemc.org/";
     license     = licenses.asl20;
-    platforms   = platforms.linux;
     maintainers = with maintainers; [ victormignot amiloradovsky ];
   };
 }
