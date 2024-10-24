@@ -44,6 +44,7 @@
   # Also, don't clean up environment variables (so that NIX_ environment variables are passed to compilers).
 , enableNixHacks ? false
 , version ? "7.1.2"
+  version ? "7.3.0",
 }:
 
 let
