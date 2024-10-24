@@ -354,10 +354,10 @@ stdenv.mkDerivation rec {
           -e "/bazel_build /a\  --experimental_strict_java_deps=off \\\\" \
           -e "/bazel_build /a\  --strict_proto_deps=off \\\\" \
           -e "/bazel_build /a\  --toolchain_resolution_debug='@bazel_tools//tools/jdk:(runtime_)?toolchain_type' \\\\" \
-          -e "/bazel_build /a\  --tool_java_runtime_version=local_jdk_17 \\\\" \
-          -e "/bazel_build /a\  --java_runtime_version=local_jdk_17 \\\\" \
-          -e "/bazel_build /a\  --tool_java_language_version=17 \\\\" \
-          -e "/bazel_build /a\  --java_language_version=17 \\\\" \
+          -e "/bazel_build /a\  --tool_java_runtime_version=local_jdk_21 \\\\" \
+          -e "/bazel_build /a\  --java_runtime_version=local_jdk_21 \\\\" \
+          -e "/bazel_build /a\  --tool_java_language_version=21 \\\\" \
+          -e "/bazel_build /a\  --java_language_version=21 \\\\" \
           -e "/bazel_build /a\  --extra_toolchains=@bazel_tools//tools/jdk:all \\\\" \
 
         # Also build parser_deploy.jar with bootstrap bazel
