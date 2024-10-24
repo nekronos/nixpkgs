@@ -51,7 +51,7 @@ let
 
   src = fetchurl {
     url = "https://github.com/bazelbuild/bazel/releases/download/${version}/bazel-${version}-dist.zip";
-    hash = "sha256-nPbtIxnIFpGdlwFe720MWULNGu1I4DxzuggV2VPtYas=";
+    hash = "sha256-wr/4pei3NXtaLlIdS2M1EJGuDGshoxwfnaz4x5KPxuE=";
   };
 
   # Use builtins.fetchurl to avoid IFD, in particular on hydra
