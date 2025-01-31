@@ -12,7 +12,7 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "helix";
-  version = "unstable";
+  version = "25.01.1";
 
   src = fetchFromGitHub {
     owner = "helix-editor";
@@ -21,7 +21,7 @@ rustPlatform.buildRustPackage rec {
     sha256 = "vLDweuBMu8fOyo9YMiV/1p9gxH5/OVm8zKRkGpbcuUA=";
   };
 
-  cargoHash = "sha256-4/L0kwu1mvyipoKBSz+og4bM8c3rADNshhENqTbt+Z4=";
+  cargoHash = "sha256-UstpepSTgdirH54UtHQvKPMI7S6fVsntQDwHWGD/5o4=";
 
   nativeBuildInputs = [
     git
