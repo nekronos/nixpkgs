@@ -1,5 +1,5 @@
 {
-  fetchzip,
+  fetchgit,
   lib,
   rustPlatform,
   git,
@@ -10,17 +10,23 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "helix";
-  version = "25.01.1";
+  version = "unstable";
 
   # This release tarball includes source code for the tree-sitter grammars,
   # which is not ordinarily part of the repository.
-  src = fetchzip {
-    url = "https://github.com/helix-editor/helix/releases/download/${version}/helix-${version}-source.tar.xz";
-    hash = "sha256-rN2eK+AoyDH+tL3yxTRQQQYHf0PoYK84FgrRwm/Wfjk=";
-    stripRoot = false;
+  # src = fetchzip {
+  #   url = "https://github.com/helix-editor/helix/releases/download/${version}/helix-${version}-source.tar.xz";
+  #   hash = "sha256-rN2eK+AoyDH+tL3yxTRQQQYHf0PoYK84FgrRwm/Wfjk=";
+  #   stripRoot = false;
+  # };
+
+  src = fetchgit {
+    url = "https://github.com/helix-editor/helix.git";
+    rev = "025719c1d82fd32a82d8d8a4a138842ed92480c1";
+    hash = "sha256-vLDweuBMu8fOyo9YMiV/1p9gxH5/OVm8zKRkGpbcuUA=";
   };
 
-  cargoHash = "sha256-PVUzRl8yu2ha2El904WQo+EzvjGb3bXp+BAtZNlxAkE=";
+  cargoHash = "sha256-4/L0kwu1mvyipoKBSz+og4bM8c3rADNshhENqTbt+Z4=";
 
   nativeBuildInputs = [
     git
